@@ -1,34 +1,20 @@
-$(document).ready(function(){
+var pingPong = function(userInput) {
 
-  $("#form-container form").submit(function(event) {
-    var fields = ["activity", "farToTravel", "afterExplore", "food", "cocktails"];
-    var userAnswer = 0;
+  var finalResult = [];
 
-    fields.forEach(function(field) {
-      userAnswer += parseInt($("select#" + field).val());
-    });
-
-    if (userAnswer <= 5 ) {
-      $("#whistler").fadeIn();
-      $("#anotherSuggestion").show();
-      $(this).remove();
+  for (var i = 1; i <= userInput; i ++) {
+    if ((i % 15) === 0) {
+    finalResult.push("ping pong")
     }
-    else if (userAnswer >= 6 && userAnswer <= 13) {
-        $("#shasta").fadeIn();
-        $("#anotherSuggestion").show();
-        $(this).remove();
+    else if ((i % 5) === 0) {
+    finalResult.push("pong")
     }
-    else if (userAnswer >= 14 && userAnswer <= 16) {
-        $("#london").fadeIn();
-        $("#anotherSuggestion").show();
-        $(this).remove();
+    else if ((i % 3) === 0) {
+    finalResult.push("ping")   
     }
     else {
-      $("#thailand").fadeIn();
-      $("#anotherSuggestion").show();
-      $(this).remove();
+      finalResult.push(i)
     }
-
-    event.preventDefault();
-  });
-});
+  };
+  return finalResult
+};
