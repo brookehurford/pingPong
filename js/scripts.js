@@ -10,7 +10,7 @@ var pingPong = function(userInput) {
     finalResult.push("pong")
     }
     else if ((i % 3) === 0) {
-    finalResult.push("ping")   
+    finalResult.push("ping")
     }
     else {
       finalResult.push(i)
@@ -18,3 +18,14 @@ var pingPong = function(userInput) {
   };
   return finalResult
 };
+
+$(document).ready(function(){
+  $("form#pingPong").submit(function(event) {
+    var userInput = parseInt($("input#userInput").val());
+    var numberList = pingPong(userInput);
+
+    $(".numberList").text(numberList);
+    $(".result").show();
+    event.preventDefault();
+  });
+});
