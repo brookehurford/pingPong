@@ -1,5 +1,13 @@
+body {
+  background-color: #d3d3d3;
+}
+
 h1 {
   font-size: 50px;
+}
+
+h2 {
+  margin: 0px;
 }
 
 .header {
@@ -7,5 +15,22 @@ h1 {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 25px;
+}
+
+.formContent {
+  padding-top: 80px;
+  padding-left: 100px;
+  padding-right: 100px;
+  float: right;
+  background-color: #d3d3d3;
+}
+
+.leftColumn {
+  border: solid 2px red;
+  margin-top: 35px;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding right: 20px;
+  background-color: #90c590;
+  padding-bottom: 600px;
 }

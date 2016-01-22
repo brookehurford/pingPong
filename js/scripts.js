@@ -28,7 +28,6 @@ $(document).ready(function(){
     for (var i = 0; i < numberList.length; i++ ) {
         $(".numberList").append("<li>" + numberList[i] + "</li>")
     };
-
     event.preventDefault();
   });
 });
