@@ -3,11 +3,24 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 70px;
 }
 
 h2 {
   margin: 0px;
+}
+
+ol {
+  list-style-position: inside;
+  text-indent: 30px;
+}
+
+.leftColumn h3 {
+  color: #ffffb2;
+}
+
+.leftColumn p {
+  color: white;
 }
 
 .header {
@@ -19,18 +32,14 @@ h2 {
 
 .formContent {
   padding-top: 80px;
-  padding-left: 100px;
-  padding-right: 100px;
-  float: right;
   background-color: #d3d3d3;
 }
 
 .leftColumn {
-  border: solid 2px red;
+  float: left;
   margin-top: 35px;
-  padding-top: 30px;
-  padding-left: 50px;
-  padding right: 20px;
+  margin-right: 70px;
+  padding: 30px 60px 1000px 30px;
   background-color: #90c590;
-  padding-bottom: 600px;
+  /*padding-bottom: 600px;*/
 }
