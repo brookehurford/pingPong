@@ -21,11 +21,14 @@ var pingPong = function(userInput) {
 
 $(document).ready(function(){
   $("form#pingPong").submit(function(event) {
+    $("ul").empty();
     var userInput = parseInt($("input#userInput").val());
     var numberList = pingPong(userInput);
 
-    $(".numberList").text(numberList);
-    $(".result").show();
+    for (var i = 0; i < numberList.length; i++ ) {
+        $(".numberList").append("<li>" + numberList[i] + "</li>")
+    };
+
     event.preventDefault();
   });
 });
